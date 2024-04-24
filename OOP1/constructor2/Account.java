@@ -7,7 +7,7 @@ public class Account {
     private String telefonNo;
 
     public Account() {
-        System.out.println("Kendi yazdığımız constructor...");
+        this("bilgi yok", 0.0, "bilgi yok", "bilgi yok", "bilgi yok");
     }
 
     public Account(
@@ -21,6 +21,26 @@ public class Account {
         this.isim = isim;
         this.email = email;
         this.telefonNo = telefonNo;
+    }
+
+    public Account(String isim, String email, String telefonNo){
+        // this.isim=isim;
+        // this.email=email;
+        // this.telefonNo=telefonNo;
+
+        // this.bakiye=0.0;
+        // this.hesapNo="Bilgi yok";
+
+        this("Bilgi Yok", 0.0, isim, email, telefonNo);
+        }
+
+    public void bilgileriGoster(){
+        System.out.println("Hesap No: " + this.hesapNo);
+        System.out.println("Bakiye" + this.bakiye);
+        System.out.println("İsim" + this.isim);
+        System.out.println("Email" + this.email);
+        System.out.println("Telefon Numarası" + this.telefonNo);
+
     }
 
     public void paraYatir(double miktar) {
